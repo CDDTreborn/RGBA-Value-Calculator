@@ -1,9 +1,9 @@
 function calculateValues() {
     const presets = {
-        1: [1.00],
-        2: [0.212, 1.00],
-        3: [0.089, 0.397, 1.00],
-        4: [0.05, 0.212, 0.521, 1.00],
+        1: [1.000],
+        2: [0.212, 1.000],
+        3: [0.089, 0.397, 1.000],
+        4: [0.050, 0.212, 0.521, 1.000],
     };
 
     const channelIDs = {
@@ -38,7 +38,7 @@ function calculateValues() {
             const idValuePairs = values.map((value, index) => {
                 const currentID = startingID + index;
                 const paddedID = currentID.toString().padStart(2, "0");
-                return `ID ${paddedID} (${value.toFixed(2)})`;
+                return `ID ${paddedID} (${value.toFixed(3)})`; // Three decimal places
             }).join(", ");
 
             // Add row to the table
